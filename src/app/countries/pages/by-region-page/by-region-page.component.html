@@ -3,9 +3,13 @@
 <hr>
 
 <div class="row">
-  <div class="col">
+  <div class="col text-center">
     <!--  SearchBox  -->
-    <shared-search-box (onValue)="searchByRegion($event)" placeholder="Buscar por capital"></shared-search-box>
+    <!-- <shared-search-box (onValue)="searchByRegion($event)" placeholder="Buscar por capital"></shared-search-box> -->
+    <button *ngFor="let region of regions" class=" btn btn-outline-secondary mx-2"
+      [ngClass]="{'active': selectedRegion === region}" (click)="searchByRegion(region)">
+      {{region | titlecase}}
+    </button>
   </div>
 </div>
 
