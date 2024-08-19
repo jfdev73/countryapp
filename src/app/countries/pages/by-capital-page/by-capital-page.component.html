@@ -6,7 +6,8 @@
   <div class="col">
     <!--  SearchBox  -->
     <!-- (onValue)="searchByCapital($event)" -->
-    <shared-search-box (onDebounce)="searchByCapital($event)" placeholder="Buscar por capital"></shared-search-box>
+    <shared-search-box (onDebounce)="searchByCapital($event)" [initialValue]="capital"
+      placeholder="Buscar por capital"></shared-search-box>
   </div>
 </div>
 
